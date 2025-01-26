@@ -72,5 +72,43 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle, #cccccc80 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+.editor-bar {
+  @apply bg-white border border-gray-200/50 shadow-sm rounded-lg py-7 px-5;
+}
+
+.draggable-form {
+  @apply  w-[70%];
+}
+
+.group-elements {
+  @apply space-y-4;
+
+  h2 {
+    @apply text-[14px] font-medium text-neutral-500 uppercase;
+  }
+
+  &--items {
+    @apply flex flex-col gap-3;
+
+    .item-element {
+      @apply bg-neutral-100 hover:bg-neutral-200/95 p-4 rounded-lg flex gap-4 transition-all duration-200 ease-in;
+    }
+  }
+}
+
+.field-editor {
+  @apply flex gap-3 bg-white border border-gray-200/50 shadow-sm rounded-lg py-7 px-5;
+
+  &--drag {
+    @apply w-[10%] flex items-center;
+  }
+
+  &--config {
+    @apply w-[90%] space-y-4;
   }
 }
